@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+
+<body style="background-color: bisque;">
+    <header>
+        <h1>Formulário 2</h1>
+    </header>
+
+    <hr>
+
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Informações</a></li>
+            <li><a href="#">Contato</a></li>
+
+        </ul>
+    </nav>
+    <hr>
+    <main>
+        <section>
+            <h2>Contato</h2>
+            <p>Entre em contato conosco para Informações ou reclamações sobre nosso serviço</p>
+    <form action="" method="post">
+        <!--Padrão do elemento form, quando não existe a definição 
+            do action é que, quando enviando, o formulário "irá" 
+            para a mesma página-->
+            <!--Post: envia dados para o servidor no corpo da solicitação
+            Get: parâmetros são passados pela URL, visíveis na barra de 
+            endereço-->
+            <label>Nome:</label>
+            <input type="text">
+            <br><br>
+            <label for="">Email:</label>
+            <input type="email" name="email" id="email">
+            <br><br>
+            <fieldset><!--Fildeset cria uma "caixinha" para delimitar 
+                campos em comum-->
+                <legend>Dados pessoais</legend>
+                <label for="">Endereço:</label><br>
+                <textarea rows="5" cols="80"></textarea>
+                <select name="estado" id="estado">
+                    <optgroup label="Sudeste">
+                        <option value="sp">São Paulo</option></optgroup>
+                        <optgroup label="Sul">
+                    <option value="rs">Rio Grande do Sul</option></optgroup>
+                </select>
+                <!--O select cria uma lista de opções para o usuário
+                escolher, ele é vantajoso quando queremos limitar 
+                quais respostas serão dadas para certos campos. È possível
+                agrupar opções (Options) por meio do elementos optgroup, ele 
+                cria uma etiqueta para definir elementos em comum-->
+                <br>
+                <br>
+                <label for="">Idade:</label>
+                <input type="number" name="idade" id="idade" step="1" min="0" max="100">
+                <br><br>
+                <label for="" id="altura">Altura (em metros):</label>
+                <input type="number" name="altura" id="altura" step="0.1" min="0" max="3">
+                <!--Input tipo número (number) pode ser utilizado em conjutos com o 
+                atributo step, que define a variação desse número (passo), o atributo
+                min e max, que define o menor e o maior valor aceito naquele input, 
+                respectivamente-->
+                <br><br>
+                <label for="" id="data">Data:</label>
+                <input type="date" name="date" id="date">
+                <br>
+                <br>
+                <label for="">Cidade:</label>
+                <input list="cidades" name="cidade" id="cidade">
+                <datalist id="cidades">
+                    <option value="Araraquara"></option>
+                    <option value="São Carlos"></option>
+                    <option value="Ibaté"></option>
+                </datalist> 
+            </fieldset><br>
+            <center>
+            <input type="submit" value="Enviar">
+            </center>
+    </form>
+    </section>
+    </main>
+    <hr>
+    <br>
+    <footer>
+        <center>&copy; Formulário de envio</center>
+    </footer>
+    
+
+</body>
+
+</html>
